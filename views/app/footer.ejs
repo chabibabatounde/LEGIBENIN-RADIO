@@ -86,14 +86,14 @@ function startplayer()
     lecteurSection.setAttribute("style","padding:0px; background:black")
     let interieur ="<div class='row'>"
     interieur +="<div class='col-xs-2'>"
-    interieur += '<img src="images/wave.gif" style="width:60px; height:60px;">';
+    interieur += '<center><img src="images/wave.gif" style="width:60px; height:60px;"></center>';
     interieur +="</div>"
     interieur +="<div class='col-xs-8'> <center>"
-    interieur += '<br>Vous écoutez LEGIBENIN RADIO, La premiere webradio du droit au Bénin!';
+    interieur += '<br><marquee>Vous êtes sur LEGIBENIN RADIO, La premiere webradio du droit au Bénin! LEGIBENIN RADIO, la radio du droit, la radio de vos droits...</marquee>';
     interieur +="</center>"
     interieur +="</div>"
     interieur +="<div class='col-xs-2' style='padding:10px;'>"
-    interieur += '<div id="playbtn" onclick="startplayer()" style="cursor:pointer; color:white; background-color:#3a8753; height:40px; border-radius:40px; padding:10px; padding-left:14px; width:40px;"> <span id="icon-img"  class="fa fa-play"></span> </div>';
+    interieur += '<center> <div id="playbtn" onclick="startplayer()" style="cursor:pointer; color:white; background-color:#3a8753; height:40px; border-radius:40px; padding:10px; padding-left:14px; width:40px;"> <span id="icon-img" class="fa fa-play"></span> </center></div>';
     interieur +="<div>"
     interieur +="</div>"
     lecteurSection.innerHTML =  interieur;
@@ -116,6 +116,18 @@ function startplayer()
 function getCtrlByClass(name){
     var elements = document.getElementsByClassName(name);
     return elements[0];
+}
+
+
+
+
+function changeContent(link, page){
+    let inner = document.getElementById('app-component');
+    url =  "/accueil";
+    $.get(url, function(data, status){
+        console.log(data);
+        inner.innerHTML  = data;
+    });
 }
 </script>
 

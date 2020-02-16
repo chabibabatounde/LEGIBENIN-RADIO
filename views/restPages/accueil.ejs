@@ -13,12 +13,13 @@
     }
 %>
 <div class="row no-gutter item-info-overlay">
+    
     <div class="col-sm-6">
-        <div id="post_widget-1" class="widget-2 widget-even widget-alt widget widget_post_widget">
-            <div class="row item-grid owl-dots-sm owl-dots-top-right item-slider owl-carousel owl-theme m-a-0" data-ui-jp="owlCarousel" data-ui-options="{items: 1,loop: true,autoplay: true,nav: true,animateOut: 'fadeOut'}">
-                <div class="">
-                    <div class="item r " data-id="70">
-                        <div class="item-media">
+        <div id="post_widget-2" class="widget-4 widget-even widget-alt widget widget_post_widget">
+            <div class="row item-grid ">
+                <div class="col-xs-6 col-sm-6">
+                    <div class="item r item-track" data-id="59">
+                        <div class="item-media item-media-1by2">
                             <a href="#" class="item-media-content" style="background-image: url(/images/couverture/<%= slide[0].emission.couverture %>);"></a>
                             <div class="item-overlay center">
                                 <button  class="btn-playpause">Play</button>
@@ -26,19 +27,29 @@
                         </div>
                         <div class="item-info">
                             <div class="item-overlay bottom text-right">
-                                <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                                <a class="btn-like " data-site-id="1" data-post-id="59" data-count="52">
+                                    <span class="">
+                                        <i class="fa fa-heart-o"></i>
+                                        <i class="active fa fa-heart text-primary"></i>
+                                    </span>
+                                </a>
+                                <a href="#" class="btn-more" data-toggle="dropdown">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </a>
                                 <div class="dropdown-menu pull-right l-h grey lt"></div>
                             </div>
                             <div class="item-title text-ellipsis">
                                 <a href="#"><%= slide[0].emission.nomEmission %></a>
                             </div>
                             <div class="item-author text-sm text-ellipsis text-muted">
-                                <a href="#" title="Posts by Pablo Nouvelle" rel="author">Diffusé le <%= slide[0].dateDif %></a></div>
+                                <a href="#" title="Posts by Miaow" rel="author">Diffusé le <%= slide[0].dateDif %></a>                    
                             </div>
                         </div>
                     </div>
-                    <div class="item r " data-id="34">
-                        <div class="item-media ">
+                </div>
+                <div class="col-xs-6 col-sm-6">
+                    <div class="item r item-track" data-id="61">
+                        <div class="item-media item-media-1by2">
                             <a href="#" class="item-media-content" style="background-image: url(/images/couverture/<%= slide[1].emission.couverture %>);"></a>
                             <div class="item-overlay center">
                                 <button  class="btn-playpause">Play</button>
@@ -46,7 +57,7 @@
                         </div>
                         <div class="item-info">
                             <div class="item-overlay bottom text-right">
-                                <a class="btn-like " data-site-id="1" data-post-id="34" data-count="50">
+                                <a class="btn-like " data-site-id="1" data-post-id="61" data-count="21">
                                     <span class="">
                                         <i class="fa fa-heart-o"></i>
                                         <i class="active fa fa-heart text-primary"></i>
@@ -55,11 +66,12 @@
                                 <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
                                 <div class="dropdown-menu pull-right l-h grey lt"></div>
                             </div>
-                        <div class="item-title text-ellipsis">
-                            <a href="#"><%= slide[1].emission.nomEmission %></a>
-                        </div>
-                        <div class="item-author text-sm text-ellipsis text-muted">
-                            <a href="#" title="Posts by Miaow" rel="author">Diffusé le <%= slide[1].dateDif %></a>                    
+                            <div class="item-title text-ellipsis">
+                                <a href="#"><%= slide[1].emission.nomEmission %></a>
+                            </div>
+                            <div class="item-author text-sm text-ellipsis text-muted">
+                                <a href="#" title="Posts by Miaow" rel="author">Diffusé le <%= slide[1].dateDif %></a>                    
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,5 +143,4 @@
             </div>
         </div>
     </div>
-    
 </div>
