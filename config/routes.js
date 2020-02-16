@@ -21,6 +21,8 @@ module.exports.routes = {
 
   'GET /': { action: 'app/accueil' },
   'GET /accueil': { action: 'pages/accueil' },
+  'GET /emissions': { action: 'pages/emissions' },
+  'GET /emission': { action: 'pages/emission' },
 
 
   /***************************************************************************

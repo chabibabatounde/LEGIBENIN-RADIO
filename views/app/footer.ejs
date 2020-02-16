@@ -1,4 +1,5 @@
-</div>
+                                 </div>
+    </div>
 <script type="text/javascript">
     var c = document.body.className;
     c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
@@ -98,6 +99,8 @@ function startplayer()
     interieur +="</div>"
     lecteurSection.innerHTML =  interieur;
     playbtn =  document.getElementById("playbtn");
+    //changeContent('','/emission?=4');
+
     swal({
         title: "LEGIBENIN Radio",
         text: "Voulez-vous lancer le live ?",
@@ -112,6 +115,24 @@ function startplayer()
     });
 })();
 
+function reload(fichier){
+    swal({
+        text: "Voulez-vous reécouter ce contenu?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: false,
+    })
+    .then((willDelete) => {
+        if (willDelete) {
+            fichier =  "programmes/"+fichier;
+            lecteurAudio.pause();
+            running = false;
+            document.getElementById('lasource').setAttribute('src',fichier);
+            lecteurAudio.load();
+            startplayer();
+        } 
+    });
+}
 
 function getCtrlByClass(name){
     var elements = document.getElementsByClassName(name);
@@ -121,14 +142,15 @@ function getCtrlByClass(name){
 
 
 
-function changeContent(link, page){
+function changeContent(link, url){
     let inner = document.getElementById('app-component');
-    url =  "/accueil";
+    $('#app-component').hide();
     $.get(url, function(data, status){
-        console.log(data);
         inner.innerHTML  = data;
+        $('#app-component').show(1000);
     });
 }
+
 </script>
 
 

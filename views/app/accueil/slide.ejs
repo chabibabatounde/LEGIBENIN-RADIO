@@ -2,7 +2,6 @@
     let newindice  =  0;
     let indexTab = [0];
     let slide = [alaune[0]];
-    console.log(alaune.length)
     while(slide.length < 4){
         newindice = Math.floor(Math.random() * alaune.length);
         while(indexTab.indexOf(newindice) != -1){
@@ -17,7 +16,7 @@
         <div id="post_widget-1" class="widget-2 widget-even widget-alt widget widget_post_widget">
             <div class="row item-grid owl-dots-sm owl-dots-top-right item-slider owl-carousel owl-theme m-a-0" data-ui-jp="owlCarousel" data-ui-options="{items: 1,loop: true,autoplay: true,nav: true,animateOut: 'fadeOut'}">
                 <div class="">
-                    <div class="item r " data-id="70">
+                    <div  onclick="reload('<%= slide[0].fichier %>'); return false;"  class="item r " data-id="70">
                         <div class="item-media">
                             <a href="#" class="item-media-content" style="background-image: url(/images/couverture/<%= slide[0].emission.couverture %>);"></a>
                             <div class="item-overlay center">
@@ -37,7 +36,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item r " data-id="34">
+                    <div  onclick="reload('<%= slide[1].fichier %>'); return false;"  class="item r " data-id="34">
                         <div class="item-media ">
                             <a href="#" class="item-media-content" style="background-image: url(/images/couverture/<%= slide[1].emission.couverture %>);"></a>
                             <div class="item-overlay center">
@@ -71,7 +70,7 @@
         <div id="post_widget-2" class="widget-4 widget-even widget-alt widget widget_post_widget">
             <div class="row item-grid ">
                 <div class="col-xs-6 col-sm-6">
-                    <div class="item r item-track" data-id="59">
+                    <div  onclick="reload('<%= slide[2].fichier %>'); return false;"  class="item r item-track" data-id="59">
                         <div class="item-media item-media-1by2">
                             <a href="#" class="item-media-content" style="background-image: url(/images/couverture/<%= slide[2].emission.couverture %>);"></a>
                             <div class="item-overlay center">
@@ -101,7 +100,7 @@
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-6">
-                    <div class="item r item-track" data-id="61">
+                    <div  onclick="reload('<%= slide[3].fichier %>'); return false;"  class="item r item-track" data-id="61">
                         <div class="item-media item-media-1by2">
                             <a href="#" class="item-media-content" style="background-image: url(/images/couverture/<%= slide[3].emission.couverture %>);"></a>
                             <div class="item-overlay center">

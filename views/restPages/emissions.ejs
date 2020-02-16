@@ -1,0 +1,36 @@
+<div class="">
+    <div class="">
+        <div class="padding">
+            <div class="page-title">
+                <h2 class="inline m-b">Emissions </h2>
+            </div>
+            <div class="row">
+                <%
+                    for(let i = 0; i < emissions.length ; i++){
+                        let emission = emissions[i];
+                %>
+                <div class="col-xs-6 col-sm-3 col-md-3" style="padding: 4px;">
+                    <div class="item r item-track" data-id="1120">
+                        <div class="item-media ">
+                            <a onclick="changeContent(this, '/emission?page=<%= emission.id %>'); return false;"  href="#" class="item-media-content" style="background-image: url(images/couverture/<%= emission.couverture %>)"></a>
+                            <div class="item-overlay center">
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <div class="item-title text-ellipsis">
+                                <a onclick="changeContent(this, '/emission?page=<%= emission.id %>'); return false;"  href="#" ><%= emission.nomEmission %></a>
+                            </div>
+                            <div class="item-author text-sm text-ellipsis text-muted">
+                                <a onclick="changeContent(this, '/emission?page=<%= emission.id %>'); return false;"  href="#" title="Posts by Pablo Nouvelle" rel="author"><%= emission.animateur %></a>                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <%
+                    }
+                %>
+            </div>
+        </div>
+    </div>
+</div>
