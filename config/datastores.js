@@ -53,7 +53,7 @@ module.exports.datastores = {
 
     adapter: 'sails-mysql',
     //url: 'mysql://root:@localhost:/Qinowa',
-    url: 'mysql://root:@localhost/LegiBeninRadio',
+    url: 'mysql://legibeninradio:lcMDtGnpQyhZB7Uk@localhost/LegiBeninRadio',
 
   },
 
